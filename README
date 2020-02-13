@@ -1,0 +1,31 @@
+Pentru a putea contura acest joc, am folosit clasa abstracta Competitor.
+Aceasta reprezinta nucleul intregului joc, doarece din aceasta deriva
+jucatorul cu importanta cea mai mare:Basicplayer
+Deoarece Greedy si Bribed joaca in mare parte ca si un basic, m-am
+folosit de clasa Basic pentru a organiza jocul lor.
+Fiecare jucator are in mana 10 carti si in functie de logica jocului
+lor, isi adauga in sac (getInthebag) cartile cu care trec la inspectie.
+Fiecare clasa de jucatori, are implementare de comerciant, dar si de serif.
+In metoda comerciant, fiecare jucator isi adauga cartile in sac, iar de fiecare
+data cand le vine randul, se foloseste clasa serif care se finalizeaza mereu
+prin punerea sau nu, pe taraba a sacului celui pe care il controleaza.
+In main, am o implementare simpla, deoarece dau drumul la joc, dupa care
+Calculez punctele cartilor de pe taraba, urmand sa le adaug King si Queen bonus.
+Motorul jocului este implementat in clasa Engine, deoarece aici am definite
+metodele gamestart, sumpoints si sumbonuses, apelate in main.
+Am creat de asemenea, o clasa Sorting care ma ajuta la sortarea cartilor, in functie
+de criteriile cerute.
+In clasele de serif, am cautat mereu sa calculez penalty-urile primite de jucatori
+daca nu respecta regulile impuse de joc.
+Metoda DrawSomeGoods este folosita pentru a lua cele 10 carti pentru jucatori.
+Iar Putonthetable, este bariera finala prin care cartile din sac, sunt sau nu,
+calculate. 
+Pentru a putea sa il ajut pe serif, am folosit o variablila de tip Goods, declaration
+care retine mereu cartile pe care playerii le declara la insepctie. Seriful ii
+controleaza, si se aplica penalty-urile in functie de ce probleme apar.
+Sumele de bani pe care le detin jucatorii, sunt calculate mereu prin metoda modify sum.
+De asemenea, am folosit getteri si setteri pentru Mita, pentru a putea fi la curent cu
+fluenta jocului(daca un jucator da sau nu mita serifului).
+Jocul se termina prin afisarea clasamentului final, in care am sortat playerii dupa bani,
+in main.
+
